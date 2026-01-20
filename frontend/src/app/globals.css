@@ -1,0 +1,79 @@
+@import "tailwindcss/preflight";
+@import "tailwindcss";
+
+/* Beautiful dark gradient background matching Image ID: 3 */
+html.dark body {
+  @apply min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-gray-100;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  margin: 0;
+}
+/* Force dark mode background (matches your hackathon prototype) */
+html.dark {
+  background: linear-gradient(to bottom right, #111827, #4c1d95); /* Dark gray to deep purple */
+  color: #f3f4f6;
+}
+
+/* Base body styles */
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+/* Root variables for consistent theming */
+:root {
+  --background: #111827; /* gray-900 */
+  --foreground: #f3f4f6; /* gray-100 */
+  --primary: #fbbf24;    /* yellow-400 - matches your prototype's yellow */
+  --primary-hover: #f59e0b;
+  --card-bg: #1f2937;    /* gray-800 */
+}
+
+/* Dark mode (forced since we use class="dark" on html) */
+html.dark {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Smooth scrolling and base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #111827, #4c1d95); /* Subtle purple gradient like your prototype */
+}
+
+/* Custom button style to match your yellow "Get Started" button */
+.btn-primary {
+  @apply bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-5 px-10 rounded-full text-xl shadow-2xl transition transform hover:scale-105;
+}
+
+/* Card styling for dashboard panels */
+.card {
+  @apply bg-gray-800/90 backdrop-blur-lg rounded-3xl shadow-2xl border border-gray-700 p-10;
+}
+
+/* Table enhancements */
+table {
+  @apply w-full text-left;
+}
+
+th {
+  @apply text-yellow-400 uppercase tracking-wider text-sm pb-4;
+}
+
+td {
+  @apply py-6 border-b border-gray-700;
+}
+
+/* Responsive container */
+.container {
+  @apply max-w-7xl mx-auto px-6;
+}
